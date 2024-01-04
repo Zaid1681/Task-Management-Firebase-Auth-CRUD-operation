@@ -25,7 +25,7 @@ function TodoList() {
     });
     unsubscribe();
   }, []);
- 
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -55,9 +55,12 @@ function TodoList() {
     navigate("/newtask");
   };
 
- 
+  // const handleaAdd = () => {
+  //   navigate("/newtask");
+  // };
+
   return (
-    <div className="container mt-4 d-flex">
+    <div className="container mt-4 ">
       <div className="row gap-10">
         {data.map((item, index) => (
           <TaskItem key={index} task={item} />

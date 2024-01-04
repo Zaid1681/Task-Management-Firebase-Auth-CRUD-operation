@@ -26,7 +26,7 @@ function TaskItem(task) {
     }
   };
   return (
-    <div className={"card m-1 col-3 p-0 border "}>
+    <div className="card m-1 col-3 p-0 border " style={{ width: "140%" }}>
       <div
         className="card-body"
         style={{
@@ -57,6 +57,14 @@ function TaskItem(task) {
           >
             {task.task.Description}
           </p>
+          <p
+            className="card-text p-10 "
+            style={{
+              display: "flex",
+            }}
+          >
+            {task.task.deadline}
+          </p>
         </div>
         <div
           className="row"
@@ -75,6 +83,7 @@ function TaskItem(task) {
           >
             Delete
           </button>
+          {console.log("task.task", task.task)}
           {/* <button> */}
           <EditTask task={task.task} />
         </div>

@@ -2,8 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { auth, db } from "../../firebase";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { doc } from "firebase/firestore";
-import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
+import { doc } from "firebase/compat/firestore";
+import {
+  collection,
+  addDoc,
+  getDocs,
+  query,
+  where,
+} from "firebase/compat/firestore";
 import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
@@ -35,7 +41,7 @@ function MainMenu() {
       if (user) {
         // User is authenticated, allow access to the rout
         console.log("user from main menu", user.uid);
-        setUser(user.uid);
+        setUser({ user });
       } else {
         console.log("no user");
       }

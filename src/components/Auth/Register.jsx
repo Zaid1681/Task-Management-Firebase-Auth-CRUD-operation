@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import {
-  getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-} from "firebase/auth";
+} from "firebase/auth"; // Updated import statement
+
 import Swal from "sweetalert2";
 
 import { auth } from "../../firebase";
